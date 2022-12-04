@@ -18,11 +18,17 @@ class service_get_set():
 service = service_get_set()
 class MainScreen(Screen): #Основное окно
     def convertBin(self):
-        num = int(self.ids.number.text)
-        self.ids.result.text = bin(num)
+        try:
+            num = int(self.ids.number.text)
+            self.ids.result.text = bin(num)
+        except:
+            pass
     def convertHex(self):
-        num = int(self.ids.number.text)
-        self.ids.result.text = hex(num)
+        try:
+            num = int(self.ids.number.text)
+            self.ids.result.text = hex(num)
+        except:
+            pass
 
 class ConvertApp(MDApp):
     def build(self):
