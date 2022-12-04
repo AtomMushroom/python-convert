@@ -1,0 +1,45 @@
+<MainScreen>:
+    canvas:
+        Rectangle:
+            source: 'cover.jpg'
+            pos: self.pos
+            size: self.size
+
+    GridLayout:
+        rows: 4
+        AnchorLayout:
+            #anchor_y: 'top'
+            Label:
+                text: 'Добро пожаловать.'
+                font_size: '32sp'
+
+        AnchorLayout:
+            anchor_y: 'center'
+            Label:
+                id: result
+                text: 'Введите число для конвертации (10):'
+                font_size: '22sp'
+
+        BoxLayout:
+            size_hint: 1, 0.7
+            spacing: 50
+            padding: [10, 0, 10, 130]
+            TextInput:
+                id: number
+                multiline: False
+                mode: "fill"
+                hint_text: "Число в десятичной системе"
+        BoxLayout:
+            spacing: 50
+            padding: [20, 0, 20, 50]
+            size_hint: 1, 0.6
+            Button:
+                text: 'Конвертировать в двоичную систему'
+                background_color: (0.3, 0.2, 0.7, 1.0)
+                font_size: '10sp'
+                on_press: root.convertBin()
+            Button:
+                text: 'Конвертировать в двоичную систему'
+                background_color: (0.3, 0.2, 0.7, 1.0)
+                font_size: '10sp'
+                on_press: root.convertHex()
