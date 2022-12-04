@@ -32,7 +32,7 @@ class MainScreen(Screen): #Основное окно
 
 class ConvertApp(MDApp):
     def build(self):
-        self.title = 'Python Chat'
+        self.title = 'Python Convert'
         self.sm = ScreenManager()
         self.sm.add_widget(MainScreen(name='menu'))
 
