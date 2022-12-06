@@ -6,7 +6,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 Config.set("graphics", "resizeable", "0")
 #Config.set("graphics", "width", "480") WTF
 #Config.set("graphics", "height", "853") WTF
-Window.size = (480, 853)
+#Window.size = (480, 853)
 
 class service_get_set():
     def __init__(self, number=""):
