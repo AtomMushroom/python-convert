@@ -9,36 +9,59 @@
         rows: 4
         AnchorLayout:
             Label:
-                text: 'Добро пожаловать.'
+                text: 'Добро пожаловать!'
                 font_size: '32sp'
 
         AnchorLayout:
             anchor_y: 'center'
             Label:
                 id: result
-                text: 'Введите число для конвертации (10):'
-                font_size: '22sp'
+                text: 'Введите число для конвертации:'
+                font_size: '18sp'
 
         BoxLayout:
             size_hint: 1, 0.7
             spacing: 50
             padding: [10, 0, 10, 130]
-            TextInput:
+            MDTextField:
                 id: number
                 multiline: False
+                input_filter: 'int'
                 mode: "fill"
                 hint_text: "Число в десятичной системе"
-        BoxLayout:
-            spacing: 50
-            padding: [20, 0, 20, 50]
+        MDBoxLayout:
+            adaptive_width: True
+            orientation: "vertical"
+            spacing: 16
+            padding: [20, 0, 20, 30]
             size_hint: 1, 0.6
-            Button:
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в двоичную систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
                 font_size: '8sp'
                 on_press: root.convertBin()
-            Button:
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5}
+                text: 'Конвертировать в восьмеричную систему'
+                background_color: (0.3, 0.2, 0.7, 1.0)
+                font_size: '8sp'
+                on_press: root.convertOct()
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в шестнадцатиричную систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
                 font_size: '8sp'
                 on_press: root.convertHex()
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5}
+                text: 'Конвертировать в Римскую систему'
+                background_color: (0.3, 0.2, 0.7, 1.0)
+                font_size: '8sp'
+                on_press: root.convertRome()
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5}
+                text: 'Конвертировать в Морзе'
+                background_color: (0.3, 0.2, 0.7, 1.0)
+                font_size: '8sp'
+                on_press: root.convertMorse()
