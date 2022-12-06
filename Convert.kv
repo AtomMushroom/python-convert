@@ -10,19 +10,19 @@
         AnchorLayout:
             Label:
                 text: 'Добро пожаловать!'
-                font_size: '32sp'
+                font_size: '24sp'
 
         AnchorLayout:
             anchor_y: 'center'
             Label:
                 id: result
                 text: 'Введите число для конвертации:'
-                font_size: '18sp'
+                font_size: '20sp'
 
         BoxLayout:
             size_hint: 1, 0.7
             spacing: 50
-            padding: [10, 0, 10, 130]
+            padding: [50, 0, 50, 180]
             MDTextField:
                 id: number
                 multiline: False
@@ -39,29 +39,29 @@
                 pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в двоичную систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
-                font_size: '8sp'
+                font_size: '14sp'
                 on_press: root.convertBin()
             MDRaisedButton:
                 pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в восьмеричную систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
-                font_size: '8sp'
+                font_size: '14sp'
                 on_press: root.convertOct()
             MDRaisedButton:
                 pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в шестнадцатиричную систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
-                font_size: '8sp'
+                font_size: '14sp'
                 on_press: root.convertHex()
             MDRaisedButton:
                 pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в Римскую систему'
                 background_color: (0.3, 0.2, 0.7, 1.0)
-                font_size: '8sp'
+                font_size: '14sp'
                 on_press: root.convertRome()
             MDRaisedButton:
                 pos_hint: {'center_x': 0.5}
                 text: 'Конвертировать в Морзе'
                 background_color: (0.3, 0.2, 0.7, 1.0)
-                font_size: '8sp'
+                font_size: '14sp'
                 on_press: root.convertMorse()
